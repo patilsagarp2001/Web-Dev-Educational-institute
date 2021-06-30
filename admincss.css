@@ -1,0 +1,70 @@
+.one{
+  background-color: #0a1c57;
+  color:white;
+  //position: fixed;
+}
+.homelink{
+	font-weight: bold;
+	font-size: 120%;
+	background-color: white;
+	color:#0a1c57;
+	
+}
+body{
+	//background-color: #f8d02f;
+	//overflow-y: hidden; 
+}
+div{
+	//border:1px solid red;
+}
+.two{
+	background-color: #f8d02f;
+	height: 100%;
+}
+.three{
+	height: 600px;
+	background-image: url("./images/image43.jpg");
+	background-size: cover;
+}
+span{
+	background-color: white;
+}
+.six{
+	font-size: 200%;
+	font-weight: bold;
+	color:#0a1c57;
+}
+.four{
+	padding:4%;
+	//height: 50px;
+	border-radius: 20px 0px 0px 20px;
+	border:none;
+	border-bottom:2px solid #0a1c57;
+}
+.five{
+	//height: 100px;
+	width: 85%;
+	border:none;
+	border-bottom:2px solid #0a1c57;
+	//border-radius: 0px 20px 20px 0px;
+}
+.seven{
+	width:40%;
+	border:none;
+	//border-radius: 20px;
+	font-size: 150%;
+	font-weight: bold;
+	background-color: #0a1c57;
+	color:white;
+	padding:1%;	
+	border:3px solid #0a1c57;
+}
+.seven:hover{
+	//background-color: #0a1c57;
+	color: rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 25px rgba(145, 92, 182, .4);
+}
+.formback{
+	background-color: white;
+	border-radius: 0px 50px 0px 50px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>ADMIN LOGIN</title>
+	<link rel="stylesheet" type="text/css" href=".\admincss.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"><!/script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="row mx-auto one">
+	<div class="col-lg-1"></div>
+	<div class="col-lg-3">
+		<a class="homelink px-1" href="homepage.html"><i class="fa fa-home"></i> HOME</a>
+	</div>
+	<div class="col-lg-4"></div>
+	<div class="col-lg-3">
+		<i class="fas fa-phone" style="color:#f8d02f;"></i>&nbsp +91 8612764081 | <i class="fas fa-envelope" style="color:#f8d02f;"></i>&nbsp info@example.com
+	</div>	
+</div>
+<div class="two">
+	<br><br>
+	<div class="container three mx-auto p-0">
+		<div class="row mx-auto p-1">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-4 mt-5 formback">
+				<br>
+				<p class="six ">Login Now</p>
+				<hr style="border-top:4px solid #f8d02f;width: 20%;margin-left: 0px;">
+				<form action="adminlogin.php" method="POST">
+					<div class="input-group pt-3">
+						<span class="four"><i class="fa fa-envelope"></i></span>
+					    <input id="email" type="text" class="five" name="username" placeholder="Email">
+					</div>
+					<div class="input-group pt-3">
+					    <span class="four"><i class="fa fa-key"></i></span>
+					    <input id="password" type="password" class="five" name="password" placeholder="Password">
+					</div><br>
+					<div class="pt-4 ">
+						<button class="seven" name="login" type="submit">
+							Login
+						</button>
+					</div>
+					<br>
+					<div class="text-center">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="forgetpassword.html">
+							Username / Password?
+						</a>
+					</div>
+					<br><br>
+				</form>
+			</div>
+			<div class="col-lg-7"></div>
+			
+		</div>
+	</div>
+	<br><br><br><br>
+</div>
+
+</body>
+</html>

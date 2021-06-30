@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>College Life</title>
+	<link rel="stylesheet" type="text/css" href=".\style.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+.modal-header{
+  background-image: url("./images/image6.jpg");
+  background-size: cover;
+  height: 200px;
+  color: white;
+}
+.checked{
+  color: #f8d02f;
+}
+</style>
+</head>
+
+
+<body>
+<div class="row mx-auto one">
+	<div class="col-lg-9">
+		<i class="fas fa-phone" style="color:#f8d02f;"></i>&nbsp +91 8612764081 | <i class="fas fa-envelope" style="color:#f8d02f;"></i>&nbsp info@example.com
+	</div>
+	<div class="col-lg-2">
+		<button class="px-3 two" data-toggle="modal" data-target="#myModal">APPLY NOW</button>
+	</div>
+</div>
+<!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <div class="my-auto"><h3>Class Registration</h3></div>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        <div class="modal-body">
+	          <form action="courseregister.php" method="POST">
+							<table style="width: 100%;">
+								<tr>
+									<td>
+										<label style="font-weight: bold;">Student First Name:</label>
+										<input type="text" name="fname" placeholder=" First Name " style="border: 3px solid #0a1c57;" required/>
+									</td>
+									<td>
+										<label style="font-weight: bold;">Student Last Name:</label>
+										<input type="text" name="lname" placeholder=" Last Name " style="border: 3px solid #0a1c57;" required/>
+									</td>
+									
+								</tr>
+								<tr>
+									
+									<td>
+										<label style="font-weight: bold;">Birth Date</label>
+										<input type="date" name="dob" placeholder=" First Name " style="border: 3px solid #0a1c57;" required/>
+									</td>
+									<td>
+										<label style="font-weight: bold;">Gender</label>
+										<select class="w-100" style="height:40px;border: 3px solid #0a1c57;" name="gender" required>
+											<option>--Select--</option>
+											<option>Male</option>
+											<option>Female</option>
+											<option>Other</option>
+										</select>
+										
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<label style="font-weight: bold;">Student Email:</label>
+										<input type="email" name="email" placeholder=" Enter Email " style="border: 3px solid #0a1c57;" required/>
+									</td>
+									<td>
+										<label style="font-weight: bold;">Student Mobile:</label>
+										<input type="number" name="phone" placeholder=" Enter Phone " style="border: 3px solid #0a1c57;" required/>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<br>
+										<label style="font-weight: bold;">Student Address:</label>
+										<input type="text" name="address1" placeholder=" Address Line 1 " style="border: 3px solid #0a1c57;" required/><br><br>
+										<input type="text" name="address2" placeholder=" Address Line 2 " style="border: 3px solid #0a1c57;" required/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="text" name="city" placeholder=" City " style="border: 3px solid #0a1c57;" required/><br><br>
+										<input type="number" name="pincode" placeholder=" Pincode " style="border: 3px solid #0a1c57;" required/>
+									</td>
+									<td>
+										<input type="text" name="state" placeholder=" State " style="border:none;border: 3px solid #0a1c57;" required/><br><br>
+										<input type="text" name="country" placeholder=" Country " style="border: 3px solid #0a1c57;" required/>
+									</td>
+								</tr>
+
+								<tr>
+
+									<td>
+										<br>
+										<label style="font-weight: bold;">10th Percentage:</label>
+										<input type="text" name="th10percentage" placeholder=" Enter 10th Percentage " style="border: 3px solid #0a1c57;" required/>
+									</td>
+									<td>
+										<br>
+										<label style="font-weight: bold;">12th Percentage:</label>
+										<input type="text" name="th12percentage" placeholder=" Enter 12th Percentage " style="border: 3px solid #0a1c57;" required/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label style="font-weight: bold;">Degree:</label><br>
+										<select class="w-100" style="height:40px;border: 3px solid #0a1c57;" onchange="myfun(this.value)" name="degree" required>
+											<option>--Select--</option>
+											<option>BTech</option>
+											<option>MBA</option>
+											<option>MTech</option>
+											<option>BPharm</option>
+											<option>MBAPharm</option>
+										</select><br><br>
+									</td>
+									<td>
+										<label style="font-weight: bold;">Specialization:</label><br>
+										<select class="w-100" style="height:40px;border: 3px solid #0a1c57;" id="cour" name="specialization" required>
+											<option>--Select--</option>
+										</select><br><br>
+
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="w=100 text-center">
+										<button class="px-3 py-2">Submit</button>
+									</td>
+								</tr>
+							</table>
+							<br>
+						</form>
+	        </div> 
+	      </div>
+	    </div>
+	  </div>
+
+<nav class="navbar navbar-expand-xl navbar-light">
+	<a class="navbar-brand" style="color:#0a1c57;font-weight: bold;"><i class="fa fa-graduation-cap p-2 three"></i>&nbspEIKRA</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="color:red;"><span class="fa fa-bars"></span></button>
+
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav p-3">
+      <li class="nav-item mx-3 py-2 px-3" style="background-color: #f8d02f;">
+        <a class="nav-link navtext" href="homepage.html" style="color:#0a1c57;font-weight: bold;"><span class="fa fa-home"></span> HOME</a>
+      </li>
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="#featurecourse"  style="color:#0a1c57;font-weight: bold;" ><span class="fa fa-book"></span> COURSES</a>
+      </li>
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="gallery.html"  style="color:#0a1c57;font-weight: bold;" ><span class="fa fa-images"></span> GALLERY</a>
+      </li>  
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="contactus.html"  style="color:#0a1c57;font-weight: bold;"><span class="fa fa-phone"></span> CONTACT US</a>
+      </li> 
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="admin.html"  style="color:#0a1c57;font-weight: bold;"><span class="fa fa-users"></span> ADMIN LOGIN</a>
+      </li>
+			<li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="#"  style="color:#0a1c57;font-weight: bold;">
+        	<span class="fas fa-search"></span>&nbsp &nbsp|&nbsp &nbsp
+        	<span class="fas fa-shopping-cart"></span><span style="margin-top:-10px;vertical-align: top;" class='badge badge-warning' id='lblCartCount'> 0 </span>
+      	</a>
+      </li> 
+    </ul>
+  </div>
+  
+</nav>
+
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active four">
+    	<div class="pb-5 five">
+    		<h1>Best Education Wordpress <br>Themes for 2021</h1><br>
+    		<p>Emply dummy text of the printing and typesetting industry orem Ipsum has been the industry's standard dummy text ever sinceprinting and typesetting industry.</p><br>
+    		<button class="p-3 six" data-toggle="modal" data-target="#myModal">START A COURSE</button>
+    	</div>
+    </div>
+    <div class="carousel-item seven">
+      	<div class="pb-5 eight">
+    		<h1>Best Education Wordpress Themes for 2021</h1><br>
+    		<p>Emply dummy text of the printing and typesetting industry orem Ipsum has been the industry's standard dummy text ever sinceprinting and typesetting industry.</p><br>
+    		<button class="p-3 nine" data-toggle="modal" data-target="#myModal">START A COURSE</button>
+    	</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="margin-left: -13%;padding-left: 13%;">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="padding-left: 13%;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+
+
+
+
+<div class="ten">
+	<div class="row mx-auto eleven">
+		<div class="col-lg-4 p-5">
+			<h3>Scholarship Facility</h3><h2><i class="fa fa-graduation-cap p-2 twelve"></i></h2>
+			<p>Eimply dummy text printing ypese tting industry.</p>
+		</div>
+		<div class="col-lg-4 p-5 thirteen" style="">
+			<h3>Skilled Lectures&nbsp&nbsp&nbsp&nbsp</h3><h2><i class="fas fa-user p-2 fourteen" style=""></i></h2>
+			<p>Eimply dummy text printing ypese tting industry.</p>
+		</div>
+		<div class="col-lg-4 p-5">
+			<h3>Book Library & Store</h3><h2><i class="fa fa-book p-2 fifteen" style=""></i></h2>
+			<p>Eimply dummy text printing ypese tting industry.</p>
+		</div>
+	</div>	
+</div>
+<div class="row mx-auto">
+	<div class="col-lg-6 col-md-12 p-5">
+		<h1>Welcome To Our Campus</h1><br>
+		<p>Tmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><br>
+		<p>Smply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book.Smply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's when an unknown printerit to make a type specimen book.</p><br>
+		<button class="p-3 sixteen" data-toggle="modal" data-target="#myModal2">READ MORE</button>
+		<!-- Modal -->
+	  <div class="modal fade" id="myModal2" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <div class="my-auto"><h3>Welcome To Our Campus</h3></div>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        <div class="modal-body">
+	          <p>Tmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><br>
+		<p>Smply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book.Smply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's when an unknown printerit to make a type specimen book.</p><br>
+		<p>Tmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><br>
+		<p>Smply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book.Smply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's when an unknown printerit to make a type specimen book.</p><br>
+	        </div> 
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="col-lg-2">
+		
+	</div>
+	<div class="col-lg-3 col-md-12 ">
+		<img src="./images/image3.jpg" width="100%" height="500px">
+	</div>
+</div>
+<div class="pt-3" id="featurecourse" style="background-color: #e1e4ee;">
+	
+	<div class="mx-auto" style="width: 95%;">
+		<div class="px-3">
+			<h3>Features Courses &nbsp &nbsp&nbsp</h3>
+			<div style="float:right;margin-top: -30px;">
+				<a href="#recipeCarousel" role="button" data-slide="prev" >
+		            <button class="button btn-warning" style="border:none;"><i class="fas fa-chevron-left p-1" style="color:white;"></i></button>
+		        </a>
+		        <a href="#recipeCarousel" role="button" data-slide="next" >
+		            <button class="button btn-warning" style="border:none;"><i class="fas fa-chevron-right p-1" style="color:white;"></i></button>
+		        </a>
+	        </div><br>
+	    </div>
+	    <div class="row mx-auto my-auto">
+	        <div id="recipeCarousel" class="carousel slide carousel1 w-100" data-ride="carousel">
+	            <div class="carousel-inner w-100" role="listbox">
+	                <div class="carousel-item carousel-item1 active">
+	                    <div class="col-lg-3 col-md-12">
+	                        <div class="card" style="min-height: 400px;">
+	                        	<div class="card-head seventeen">
+	                        		<div class="py-1 px-2 eighteen">$93.00</div>
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>Build A Full Web Chat App From Scratch</h4>
+	                            	<p>Emply dummy text of the printing and typesetting industry...</p>
+	                            	<hr>
+	                            	<img src="./images/image10.jpg" width="50px" height="50px" style="border-radius: 50%;" />
+	                            	<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="far fa-star"></span>
+																<span class="far fa-star"></span>
+																<span class="far fa-star"></span>
+																<span class="fas fa-heart pl-5"></span>
+																<span class="fas fa-users"></span>
+																<span class="">0</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="carousel-item carousel-item1">
+	                    <div class="col-lg-3 col-md-12">
+	                        <div class="card">
+	                        	<div class="card-head nineteen" style="">
+	                        		<div class="py-1 px-2 twenty" style="">$93.00</div>
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>Master Microservices with Spring Boot and Cloud</h4>
+	                            	<p>Emply dummy text of the printing and typesetting industry...</p>
+	                            	<hr>
+	                            	<img src="./images/image10.jpg" width="50px" height="50px" style="border-radius: 50%;" />
+	                            	<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="far fa-star"></span>
+																<span class="fas fa-heart pl-5"></span>
+																<span class="fas fa-users"></span>
+																<span class="">0</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="carousel-item carousel-item1">
+	                    <div class="col-lg-3 col-md-12">
+	                        <div class="card">
+	                        	<div class="card-head twentyone">
+	                        		<div class="py-1 px-2 twentytwo">$93.00</div>
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>The Complete JavaScript Course for Beginner</h4>
+	                            	<p>Emply dummy text of the printing and typesetting industry...</p>
+	                            	<hr>
+	                            	<img src="./images/image10.jpg" width="50px" height="50px" style="border-radius: 50%;" />
+	                            	<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="far fa-star"></span>
+																<span class="far fa-star"></span>
+																<span class="fas fa-heart pl-5"></span>
+																<span class="fas fa-users"></span>
+																<span class="">0</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="carousel-item carousel-item1">
+	                    <div class="col-lg-3 col-md-12">
+	                        <div class="card">
+	                        	<div class="card-head twentythree">
+	                        		<div class="py-1 px-2 twentyfour">$93.00</div>
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>Learn PHP Programming From Scratch</h4>
+	                            	<p>Emply dummy text of the printing and typesetting industry...</p>
+	                            	<hr>
+	                            	<img src="./images/image10.jpg" width="50px" height="50px" style="border-radius: 50%;" />
+	                            	<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="fas fa-star checked"></span>
+																<span class="fas fa-heart pl-5"></span>
+																<span class="fas fa-users"></span>
+																<span class="">0</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>  
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<div class="twentyfive">
+	<div style="background: rgba(10,28, 87, 0.9);">
+		<div class="mx-auto text-center pt-5 twentysix">
+			<h1>Watch Campus Life Video tour</h1>
+			<p>Emply dummy text of the printing and typesetting industry <br>orem textever sinceprinting and typesetting industry.</p><br>
+			<button onclick="location.href='https://www.youtube.com/watch?v=ncQLAb_jJOc'" class="twentyseven">
+				<span style="background:none;"><i class="fas fa-play p-3" style="color: #f8d02f;"></i></span>
+			</button>	<br><br>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="pt-3">
+	<div class="mx-auto twentyeight">
+		<div class="px-3">
+			<h3>Our Skilled Instructors&nbsp&nbsp&nbsp&nbsp</h3>
+			<div class="twentynine">
+				<a href="#recipeCarousel1" role="button" data-slide="prev" >
+		            <button class="button btn-warning" style="border:none;"><i class="fas fa-chevron-left p-1" style="color:white;"></i></button>
+		        </a>
+		        <a href="#recipeCarousel1" role="button" data-slide="next" >
+		            <button class="button btn-warning" style="border:none;"><i class="fas fa-chevron-right p-1" style="color:white;"></i></button>
+		        </a>
+	        </div><br>
+	    </div>
+	    <div class="row mx-auto my-auto">
+	        <div id="recipeCarousel1" class="carousel slide carousel1 w-100" data-ride="carousel">
+	            <div class="carousel-inner w-100" role="listbox">
+	                <div class="carousel-item carousel-item1 active">
+	                    <div class="col-lg-3 col-md-12 ">
+	                        <div class="card">
+	                        	<div class="card-head">
+	                        		<img class="img-fluid" src="./images/image10.jpg">
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>David Lee</h4>
+	                            	<p>Web Developer<hr class="thirty"></p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="carousel-item carousel-item1">
+	                    <div class="col-lg-3 col-md-12">
+	                        <div class="card">
+	                        	<div class="card-head">
+	                        		<img class="img-fluid" src="./images/image10.jpg">
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>David Lee</h4>
+	                            	<p>Web Developer<hr class="thirty"></p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="carousel-item carousel-item1">
+	                    <div class="col-lg-3 col-md-12">
+	                        <div class="card">
+	                        	<div class="card-head">
+	                        		<img class="img-fluid" src="./images/image10.jpg">
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>David Lee</h4>
+	                            	<p>Web Developer<hr class="thirty"></p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="carousel-item carousel-item1">
+	                    <div class="col-lg-3 col-md-12 ">
+	                        <div class="card">
+	                        	<div class="card-head">
+	                        		<img class="img-fluid" src="./images/image10.jpg">
+	                        	</div>
+	                            <div class="card-body">
+	                            	<h4>David Lee</h4>
+	                            	<p>Web Developer<hr class="thirty"></p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>  
+	        </div>
+	    </div>
+	</div>
+</div>
+<div class="mx-auto" style="background-color: #e1e4ee;">
+	<div class="row mx-auto">
+		<div class="col-lg-6 px-5">
+			<h1>Latest Posts</h1><hr>
+			<div class="p-4"style="background-color: white;">
+				<div class="row">
+					<div class="col-lg-4 col-md-4"><img src="./images/image5.jpg" class="thirtythree"></div>
+					
+					<div class="col-lg-8 col-md-8">
+						<h5 class="thirtyone" style="">Summer Course Starts From 1st June</h5>
+						<p><i class="thirtytwo" style="">September 14,2017</i></p>
+						<p style="color:#0a1c57;">Emply dummy text of the printing and typesetting industry orem textever sinceprinting.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4"><img src="./images/image6.jpg" class="thirtythree"></div>
+					
+					<div class="col-lg-8 col-md-8">
+						<h5 class="thirtyone">Guest Interview will Occur Soon in the Auditorium About Artificial Intelligence</h5>
+						<p><i class="thirtytwo">September 14,2017</i></p>
+						<p style="color:#0a1c57;">Emply dummy text of the printing and typesetting industry orem textever sinceprinting.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4"><img src="./images/image7.jpg" class="thirtythree"></div>
+					
+					<div class="col-lg-8 col-md-8">
+						<h5 class="thirtyone">New Exam Schedules for Diploma</h5>
+						<p><i class="thirtytwo">September 14,2017</i></p>
+						<p style="color:#0a1c57;">Emply dummy text of the printing and typesetting industry orem textever sinceprinting.Emply dummy text of the printing and typesetting industry.</p>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div class="col-lg-6 px-5">
+			<h1>Upcoming Events</h1><hr>
+			<div class="p-4"style="background-color: white;">
+				<div class="row">
+					<div class="col-lg-3 col-md-3">
+						<div class="thirtyfour">
+							<div class="thirtyfive"></div><div class="thirtysix"></div><br>
+								<div class="thirtyseven"><h5>18</h5>OCT</div>
+						</div>
+						<div class="thirtyeight">
+							<p class="thirtynine">2020</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-9 col-md-9" style="color:#0a1c57;">
+						<h4>BASIS International Award Night</h4>
+						<p>Emply dummy text of the printing and typesetting industry orem textever sinceprinting.Emply dummy text of the printing and typesetting industry orem textever sinceprinting.Emply dummy text of the printing and typesetting industry.</p>
+						<h6>07:00 - 10:00 | Melbourne,Australia</h6>
+					</div>
+				</div>		
+			</div><br>
+			<div class="p-4"style="background-color: white;">
+				
+				<div class="row">
+					<div class="col-lg-3 col-md-3">
+						<div class="thirtyfour">
+							<div class="thirtyfive"></div><div class="thirtysix"></div><br>
+								<div class="thirtyseven"><h5>19</h5>OCT</div>
+						</div>
+						<div class="thirtyeight">
+							<p class="thirtynine">2020</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-9 col-md-9" style="color:#0a1c57;">
+						<h4>TED Talks at UCF College</h4>
+						<p>Emply dummy text of the printing and typesetting industry orem textever sinceprinting.Emply dummy text of the printing and typesetting industry orem textever sinceprinting.Emply dummy text of the printing and typesetting industry.Emply dummy text of the printing and typesetting industry.</p>
+						<h6>08:00 - 18:00 | Brisbane,Australia</h6>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fourty">
+	<div class="py-3 fourtyone">
+		<div class="row mx-auto p-5">
+			<div class="col-lg-3 col-md-6 mx-auto">	
+				<table>
+					<tr>
+						<td>
+							<p class="fourtytwo">50</p>
+							<hr class="fourtythree">
+						</td>
+						<td>
+							<p class="p-2">PROFESSIONAL<br>INSTRUCTORS </p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-lg-3 col-md-6 mx-auto">
+				<table>
+					<tr>
+						<td>
+							<p class="fourtytwo">87</p>
+							<hr class="fourtythree">
+						</td>
+						<td>
+							<p class="p-2">NEW COURSES <br>EVERY YEAR </p>
+						</td>
+					</tr>
+				</table>	
+			</div>
+			<div class="col-lg-3 col-md-6 mx-auto">	
+				<table>
+					<tr>
+						<td>
+							<p class="fourtytwo">25</p>
+							<hr class="fourtythree">
+						</td>
+						<td>
+							<p class="p-2">LIVE SESSIONS <br>EVERY MONTH </p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-lg-3 col-md-6 mx-auto">	
+				<table>
+					<tr>
+						<td>
+							<p class="fourtytwo">277</p>
+							<hr class="fourtythree">
+						</td>
+						<td>
+							<p class="p-2">REGISTERED <br>STUDENTS </p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="py-5 mx-auto all_photo" style="background-color:#f8d02f; ">
+	<div class="container-fluid">
+		<div class="row mx-auto"style="box-shadow: 3px 2px 5px 5px #888888;">
+			<div class="row col-lg-9 p-0 mx-auto" style="background-color: white;border:1px solid white;">
+				<div class="col-lg-6 col-md-6 p-0">
+					<table>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image10.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image11.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image13.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>
+						</tr>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image26.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image31.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image32.jpg" width="100%"></td>
+						</tr>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image26.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image31.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image32.jpg" width="100%"></td>
+						</tr>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image10.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image11.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image13.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>
+						</tr>
+						
+					</table>
+				</div>
+				<div class="col-lg-6 col-md-6 p-0">
+					<table>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image26.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image31.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image32.jpg" width="100%"></td>
+						</tr>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image10.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image11.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image13.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>
+						</tr>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image10.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image11.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image13.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>	
+						</tr>
+						<tr>
+							<td style="border:2px solid white;"><img class="" src="./images/image28.png" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image26.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image31.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image24.jpg" width="100%"></td>
+							<td style="border:2px solid white;"><img class="" src="./images/image32.jpg" width="100%"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="col-lg-3  py-5" style="background-color:#0a1c57;color: white;text-align: center;">
+				<h2>Join 29,12,093 <br>Students.</h2><br>
+				<button class="p-3" style="border:none;background-color: #f8d02f;color:#0a1c57;font-weight: bold;">JOIN NOW</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="py-5 all_photo" style="color:#0a1c57;font-weight: bold;">
+	<div class="container-fluid row mx-auto">
+		<div class="col-lg-8">
+			<h1>Contact With Us</h1>
+			<hr style="border-top:4px solid #f8d02f;width: 10%;margin-left: 0px;"><br>
+			<form action="sendfeedback.php" method="POST">
+				<table style="width: 100%;">
+					<tr>
+						<td>
+							<input type="text" name="fname" placeholder=" Name* "  required/>
+						</td>
+						<td>
+							<input type="email" name="email" placeholder=" Email* " required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" name="subject" placeholder=" Subject* " required/>
+						</td>
+						<td>
+							<input type="number" name="phone" placeholder=" Phone " required/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<textarea rows="5" name="message"  placeholder=" Message* " required/></textarea>
+						</td>
+
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button class="p-3">SEND MESSAGE</button>
+						</td>
+					</tr>
+				</table>
+				<br>
+			</form>
+		</div>
+		<div class="col-lg-4">
+			<h1>Information</h1>
+			<hr style="border-top:4px solid #f8d02f;width: 10%;margin-left: 0px;"><br>
+			<div class="p-3 " style="border:1px solid #b7b8c5;">
+				<h6><i class="fas fa-map-marker-alt" style="color: #f8d02f;"></i>&nbsp&nbsp&nbspPO Box 1212, California, US</h6>
+			</div><br>
+			<div class="p-3 " style="border:1px solid #b7b8c5;">
+				<h6><i class="far fa-envelope" style="color: #f8d02f;"></i>&nbsp&nbsp&nbspexample@example.com</h6>
+			</div><br>
+			<div class="p-3 " style="border:1px solid #b7b8c5;">
+				<h6><i class="fas fa-phone" style="color: #f8d02f;"></i>&nbsp&nbsp&nbsp+61 1111 3333</h6>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer py-5" style="background-color:#0a1c57;color: white;">
+
+	<div class="container-fluid">
+		<div class="row mx-auto">
+			<div class="col-xl-3 col-lg-6 col-md-6 mx-auto">
+				<h4>
+					<i class="fa fa-graduation-cap p-2" style="color:#0a1c57;background-color:#f8d02f;text-align: center;border-radius: 50%;transform: rotate(-20deg);"></i>&nbspEIKRA</h4><br>
+				<p>Emply dummy text of the printing and typesetting industry orem textever sinceprinting.Emply dummy text of the printing and typesetting industry orem textever sinceprinting.Emply dummy text of the printing and typesetting industry.Emply dummy text of the printing and typesetting industry.</p>
+				
+
+				<ul>
+					<li><a href="https://www.facebook.com"><div class="p-1 mx-2" style="border:1px solid #b7b8c5;text-align: center;" ><i class="fab fa-facebook-f" style="color: #b7b8c5;"></i></div></a></li>
+					<li><a href="https://www.twitter.com"><div class="p-1 mx-2" style="border:1px solid #b7b8c5;text-align: center;"><i class="fab fa-twitter" style="color: #b7b8c5;"></i></div></a></li>
+					<li><a href="https://www.google.com"><div class="p-1 mx-2" style="border:1px solid #b7b8c5;text-align: center;"><i class="fab fa-google-plus-g" style="color: #b7b8c5;"></i></div></a></li>
+					<li><a href="https://www.linkedin.com"><div class="p-1 mx-2" style="border:1px solid #b7b8c5;text-align: center;"><i class="fab fa-linkedin-in" style="color: #b7b8c5;"></i></div></a></li>
+					<li><a href="https://www.github.com"><div class="p-1 mx-2" style="border:1px solid #b7b8c5;text-align: center;"><i class="fab fa-github" style="color: #b7b8c5;"></i></div></a></li>
+					<li><a href="https://www.instagram.com"><div class="p-1 mx-2" style="border:1px solid #b7b8c5;text-align: center;"><i class="fab fa-instagram" style="color: #b7b8c5;"></i></div></a></li>
+				</ul>
+				<br><br><br>
+			</div>
+			<div class="col-xl-3 col-lg-6 col-md-6">
+				<h4>Featured Links</h4>
+				<br>
+				<table>
+					<tr>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="">Graduation</a></td>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="#featurecourse">Courses</a></td>
+					</tr>
+					<tr>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="">Admissions</a></td>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="">About Us</a></td>
+					</tr>
+					<tr>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="">International</a></a></td>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="">Book Store</a></td>
+					</tr>
+					<tr>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="">FAQs</a></td>
+						<td><i class="fas fa-chevron-right pr-2 pb-3" style="color: #f8d02f;" href="www.facebook.com"></i><a href="">Alumni</a></td>
+					</tr>
+				</table><br>
+			</div>
+			<div class="col-xl-3 col-lg-6 col-md-6">
+				<h4>Information</h4><br>
+				<i class="fas fa-location-arrow pr-2 pb-3" style="color: #f8d02f;"></i>44 New Design Street, Australia
+				<br>
+				<i class="fas fa-phone pr-2 pb-3" style="color: #f8d02f;"></i>32480043363
+				<br>
+				<i class="far fa-envelope pr-2 pb-3" style="color: #f8d02f;"></i>info@example.com
+				<br>
+				<i class="fas fa-phone-rotary pr-2 pb-3" style="color: #f8d02f;"></i>(123) 118 9999
+				<br><br><br>
+			</div>
+			<div class="col-xl-3 col-lg-6 col-md-6">
+				<h4>Flickr Photos</h4><br>
+				<table>
+					<tr>
+						<td style="border:2px solid #0a1c57;"><img class="" src="./images/image28.png" width="100%"></td>
+						<td style="border:2px solid #0a1c57;"><img class="" src="./images/image26.jpg" width="100%"></td>
+						<td style="border:2px solid #0a1c57;"><img class="" src="./images/image31.jpg" width="100%"></td>
+					</tr>
+					<tr>
+						<td style="border:2px solid #0a1c57;"><img class="" src="./images/image28.png" width="100%"></td>
+						<td style="border:2px solid #0a1c57;"><img class="" src="./images/image26.jpg" width="100%"></td>
+						<td style="border:2px solid #0a1c57;"><img class="" src="./images/image31.jpg" width="100%"></td>
+					</tr>
+				</table>
+				<div style="float:right;margin-top:10%;">
+					<a class="px-2 py-1" style="border-radius: 50%;border:none;background-color: #f8d02f;" href="#top"><i class="fas fa-arrow-up" style="color: white;"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+
+
+
+$('.carousel1 .carousel-item1').each(function(){
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+
+
+function myfun(data)
+{
+var req=new XMLHttpRequest();
+req.open("GET","http://localhost/TIP Project 2/Project2/response.php?datavalue="+data,true);
+req.send();
+	req.onreadystatechange=function()
+	{
+		if(req.readyState==4 && req.status==200)
+		{	
+			document.getElementById("cour").innerHTML=req.responseText;
+ 			
+		}
+	};
+}
+function list()
+{
+alert();
+var r=new XMLHttpRequest();
+r.open("GET","http://localhost/exp9/listing.php",true);
+r.send();
+alert();
+	r.onreadystatechange=function()
+	{
+		if(r.readyState==4 && r.status==200)
+		{	
+			document.getElementById("l1").innerHTML=r.responseText;
+ 			
+		}
+	};
+}
+
+
+
+</script>
+</body>
+</html>

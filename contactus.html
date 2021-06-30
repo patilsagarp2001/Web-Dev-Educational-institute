@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Coontact US</title>
+	<link rel="stylesheet" type="text/css" href=".\contactcss.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"><!/script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div style="position:fixed;z-index:99999;" class="w-100">
+	<div class="row mx-auto one">
+		<div class="col-lg-9">
+			<i class="fas fa-phone" style="color:#f8d02f;"></i>&nbsp +91 8612764081 | <i class="fas fa-envelope" style="color:#f8d02f;"></i>&nbsp info@example.com
+		</div>
+		
+	</div>
+
+	<nav class="navbar navbar-expand-xl" style="background-color:white;">
+	<a class="navbar-brand" style="color:#0a1c57;font-weight: bold;"><i class="fa fa-graduation-cap p-2 three"></i>&nbspEIKRA</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="color:red;"><span class="fa fa-bars"></span></button>
+
+
+	<div class="collapse navbar-collapse " id="collapsibleNavbar">
+    <ul class="navbar-nav p-3">
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link navtext" href="homepage.html" style="color:#0a1c57;font-weight: bold;"><span class="fa fa-home"></span> HOME</a>
+      </li>
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="homepage.html"  style="color:#0a1c57;font-weight: bold;" ><span class="fa fa-book"></span> COURSES</a>
+      </li>
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="gallery.html"  style="color:#0a1c57;font-weight: bold;" ><span class="fa fa-images"></span> GALLERY</a>
+      </li>  
+      <li class="nav-item mx-3 py-2 px-3" style="background-color: #f8d02f;">
+        <a class="nav-link" href="contactus.html"  style="color:#0a1c57;font-weight: bold;"><span class="fa fa-phone"></span> CONTACT US</a>
+      </li> 
+      <li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="admin.html"  style="color:#0a1c57;font-weight: bold;"><span class="fa fa-users"></span> ADMIN LOGIN</a>
+      </li>
+			<li class="nav-item mx-3 py-2 px-3">
+        <a class="nav-link" href="#"  style="color:#0a1c57;font-weight: bold;">
+        	<span class="fas fa-search"></span>&nbsp &nbsp|&nbsp &nbsp
+        	<span class="fas fa-shopping-cart"></span><span style="margin-top:-10px;vertical-align: top;" class='badge badge-warning' id='lblCartCount'> 0 </span>
+      	</a>
+      </li> 
+    </ul>
+  </div>
+  
+</nav>
+</div>
+
+</div>
+<div style="padding-top:200px;background-color:#0a1c57;color:white;">
+	<div class="container">
+		<h4>EKIRA</h4>
+		<h1>Contact Us</h1>
+		<p><span class="fa fa-home"></span>  Home &nbsp <span class="fa fa-chevron-right"></span> &nbsp <span class="fa fa-phone"></span> &nbspContact Us</p>
+		<hr style="border-top:4px solid #f8d02f;width: 10%;margin-left: 0px;">
+		<br>
+	</div>	
+</div>
+<br><br>
+<div class="container">
+	<button style="width: 50%;height: 70px;font-size:150%;float: left;border:none;background-color:#0a1c57;" id="temp1" onclick="buttonclick('send_feedback')">Send FeedBack</button>
+	<button style="width: 50%;height: 70px;font-size:150%;float: right;border:none;background-color:#0a1c57;" id="temp2" onclick="buttonclick('book_appointment')">Book Appointment</button>
+	<div id="show1">
+		<div class="container-fluid mx-auto">
+			<br><br><br>
+			<p style="color:red;font-weight: bold;">*Send Feedback by filling this. Out Team will reply you in few days...</p>
+			<form action="sendfeedback.php" method="POST">
+				<table style="width: 100%;">
+					<tr>
+						<td>
+							<label style="font-weight: bold;">Name:</label>
+							<input type="text" name="fname" placeholder=" Enter Name " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+						<td>
+							<label style="font-weight: bold;">Email:</label>
+							<input type="email" name="email" placeholder=" Enter Email " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="font-weight: bold;">Subject:</label>
+							<input type="text" name="subject"  placeholder=" Enter Subject " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+						<td>
+							<label style="font-weight: bold;">Phone:</label>
+							<input type="number" name="phone" placeholder=" Enter Phone " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+					</tr>
+					<tr>
+					<tr>
+						<td colspan="2">
+							<label style="font-weight: bold;">Message:</label>
+							<textarea rows="5" name="message"  placeholder=" Enter Message " style="border:none;border-bottom: 3px solid #0a1c57;" required/></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button class="p-3"><span class="fas fa-envelope"></span> &nbsp SEND MESSAGE</button>
+						</td>
+					</tr>
+				</table>
+				<br>
+			</form>	
+		</div>
+	</div>
+	<div id="show2" style="display:none;">
+		<div class="container-fluid mx-auto">
+			<br><br><br>
+			<p style="color:red;font-weight: bold;">*Select Date and Time as per you and book appoinment. Out Team will call you at same...</p>
+			<form action="bookappointment.php" method="POST">
+				<table style="width: 100%;">
+					<tr>
+						<td>
+							<label style="font-weight: bold;">Name:</label>
+							<input type="text" name="fname" placeholder=" Enter Name " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+						<td>
+							<label style="font-weight: bold;">Email:</label>
+							<input type="email" name="email" placeholder=" Enter Email " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="font-weight: bold;">Subject:</label>
+							<input type="text" name="subject" placeholder=" Enter Subject " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+						<td>
+							<label style="font-weight: bold;">Phone:</label>
+							<input type="number" name="phone" placeholder=" Enter Phone " style="border:none;border-bottom: 3px solid #0a1c57;" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="font-weight: bold;">Date:</label>
+							<input type="date" name="date" style="border:none;border-bottom: 3px solid #0a1c57;"  required/>
+						</td>
+						<td>
+							<label style="font-weight: bold;">Time:</label>
+							<input type="time" name="time" style="border:none;border-bottom: 3px solid #0a1c57;"  required/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button class="p-3"><span class="fas fa-phone"></span> &nbsp Request Call</button>
+						</td>
+					</tr>
+				</table>
+				<br>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<h1>Locate Us</h1>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2544764.181721457!2d75.69205047846273!3d20.32339666311096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1620016936443!5m2!1sen!2sin" width="100%" height="450"  allowfullscreen="" ></iframe>
+</div>
+<div class="container">
+	<h1>Information</h1>
+	<hr style="border-top:4px solid #f8d02f;width: 10%;margin-left: 0px;"><br>
+	<div class="p-3 " style="border:1px solid #b7b8c5;">
+		<h6><i class="fas fa-map-marker-alt" style="color: #f8d02f;"></i>&nbsp&nbsp&nbspPO Box 1212, California, US</h6>
+	</div><br>
+	<div class="p-3 " style="border:1px solid #b7b8c5;">
+		<h6><i class="far fa-envelope" style="color: #f8d02f;"></i>&nbsp&nbsp&nbspexample@example.com</h6>
+	</div><br>
+	<div class="p-3 " style="border:1px solid #b7b8c5;">
+		<h6><i class="fas fa-phone" style="color: #f8d02f;"></i>&nbsp&nbsp&nbsp+61 1111 3333</h6>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function buttonclick(temp){
+		if (temp=='send_feedback'){
+			show1.style.display='block';
+			show2.style.display='none';
+			temp1.style.opacity='100%';
+			temp2.style.opacity='50%';
+		}
+		if (temp=='book_appointment'){
+			show1.style.display='none';
+			show2.style.display='block';
+			temp1.style.opacity='50%';
+			temp2.style.opacity='100%';
+		}
+	}
+</script>
+</body>
+</html>
